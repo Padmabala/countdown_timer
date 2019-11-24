@@ -1,7 +1,9 @@
 {
-  "name": "countdown_timer",
-  "version": "0.1.0",
-  "private": true,
+  "name": "set_countdown_timer",
+  "version": "0.1.4",
+  "private": false,
+  "main": "dist/index.js",
+  "module": "dist/index.js",
   "dependencies": {
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
@@ -9,7 +11,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "SET NODE_ENV=production && if exist dist rmdir /s /q dist && mkdir dist && npx babel src/ --out-dir dist --copy-files",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -27,5 +29,18 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.7.0",
+    "@babel/core": "^7.7.2",
+    "@babel/plugin-proposal-class-properties": "^7.7.0",
+    "@babel/plugin-proposal-private-methods": "^7.6.0",
+    "@babel/preset-env": "^7.7.1",
+    "@babel/preset-react": "^7.7.0",
+    "babel-loader": "^8.0.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Padmabala/countdown_timer.git"
   }
 }
