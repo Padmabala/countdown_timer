@@ -15,7 +15,7 @@ class CountdownTimer extends React.Component{
     startCountdown=()=>{
       if(this.state.days==="" || this.state.hours==="" || this.state.mins==="" || this.state.secs===""){
         this.setState({
-          msg:"Please provide all the values to start the Timer"
+          msg:"Please provide all the values to start Timer"
         })
       }
       else{
